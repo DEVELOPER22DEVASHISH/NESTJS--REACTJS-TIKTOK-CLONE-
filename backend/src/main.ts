@@ -9,7 +9,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
  
-  app.enableCors({ // cross origin resources sharing
+  app.enableCors({ // cross origin resources sharing // for conncting backend and frontend
     origin: 'http://127.0.0.1:5174',
     credentials: true,
     // all headers that client are allowed to use
@@ -46,6 +46,6 @@ async function bootstrap() {
 
     })
   );
-  await app.listen(3000);
+  await app.listen(3001);
 }
 bootstrap();
